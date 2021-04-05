@@ -21,13 +21,14 @@ for x in range (1, len(holder),1):
     holder[x]=holder[x]+holder[x-1]
 
 #create final array and sort the number given
-finalArray= [0] * (len(sample)+1)
+finalArray= [0] * (len(sample))
 for x in range (0, len(sample),1):
-    finalArray[holder[sample[x]]]+=sample[x]
+    finalArray[holder[sample[x]]-1]+=sample[x]
     holder[sample[x]]-=1
 
 #print result
 print("Before sort: ")
 print(list(sample))
 print("After sort: ")
+
 print(list(finalArray))
